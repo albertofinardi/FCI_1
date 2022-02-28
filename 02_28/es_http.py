@@ -1,6 +1,7 @@
 import requests
 url = 'http://www.google.com'
 
+
 def elapsed_single():
     r = requests.get(url)
     print(f'\nRitardo: {r.elapsed.microseconds / 1000} ms')
@@ -10,6 +11,7 @@ def elapsed_single():
     # tutto il processo.
     # Tempo lettura (parsing + travel) header di ritorno - tempo partenza PDU.
     # Ritardo su internet è al più nell'ordine centinaia di millisecondi -> se è maggiore ci sono problemi.
+
 
 def elapsed_mean_max_min(num_iter):
     print(f'\nIterazioni: {num_iter}')
@@ -21,6 +23,12 @@ def elapsed_mean_max_min(num_iter):
     max_time = max(times)
     min_time = min(times)
     mean_time = sum(times) / len(times)
+
+    # Per calcolare la media:
+    # -> sum/len
+    # -> statistics.mean()
+    # -> numpy.mean() [installa numpy]
+
     print(f'\nRitardo max: {max_time} ms')
     print(f'Ritardo min: {min_time} ms')
     print(f'Ritardo medio: {mean_time} ms')
@@ -32,10 +40,9 @@ def content_url():
     print(f'Content: {r.text}')
 
 
-
 if __name__ == '__main__':
     print(f'\nURL: {url}')
-    # Commenta la funzione che non vuoi utilizzzare con '#'
+    # Commenta la funzione (o più) che non vuoi utilizzzare con '#'
     # elapsed_single()
-    elapsed_mean_max_min(10)
+    # elapsed_mean_max_min(10)
     content_url()
