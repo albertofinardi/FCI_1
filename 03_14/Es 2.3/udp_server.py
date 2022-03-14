@@ -1,11 +1,8 @@
-# WHILE -> server rimane attivo sempre (in ascolto del client)
-# clientAddress -> tupla con IP e porta
-
 from socket import socket, AF_INET, SOCK_DGRAM
-
 
 def main():
     serverPort = 12000
+    vocali = {'a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'}
 
     serverSocket = socket(AF_INET, SOCK_DGRAM)  # AF_NET -> ipv4
     # AF_NET6 -> ipv6
@@ -18,16 +15,17 @@ def main():
     while True:
         message, clientAddress = serverSocket.recvfrom(2048)
         # 2048 = dimensione buffer di ricezione -> deve essere >= del contenuto trasmesso (sennò informazione persa)
-
-        message = message.decode('utf-8')
-        modifiedMessage = message.upper()
         print(f'Connessione: {clientAddress[0]}:{clientAddress[1]}')
+        message = message.decode('utf-8')
+        consonanti = 0
 
-        serverSocket.sendto(modifiedMessage.encode('utf-8'), clientAddress)
+        for c in message:
+            if c not in vocali:
+                consonanti += 1
+
+        serverSocket.sendto(str(consonanti).encode('utf-8'), clientAddress)
 
 
 
 if __name__ == '__main__':
     main()
-
-    #NETSTAT -N
