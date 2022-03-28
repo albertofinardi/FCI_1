@@ -1,7 +1,7 @@
 # Comandi
 Visualizzare porte aperte / indirizzi IP del computer:
 ```sh
-netstat -n
+netstat -an
 ```
 
 Per comandi Python il codice è commentato
