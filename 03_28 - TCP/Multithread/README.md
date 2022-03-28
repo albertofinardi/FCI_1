@@ -3,7 +3,7 @@ Per gestire client multipli il server deve attivare più workers:
 - un worker per gestire le richieste di connessione entranti
 (listening o Welcome worker)
 - un worker per gestire ciascuna connessione (active worker)
-###Tre paradigmi:
+### Tre paradigmi:
 1. ogni worker è un thread
    - facile e veloce 
    - alcune limitazioni (numero max di thread paralleli, tutti i thread hanno gli stessi permessi etc...)
