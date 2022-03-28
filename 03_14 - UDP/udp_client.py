@@ -6,7 +6,8 @@ def main():
     # Se pc con server su stessa rete locale, usare indirizzo IP del server
     serverPort = 12000
 
-    clientSocket = socket(AF_INET, SOCK_DGRAM)    # AF_NET -> ipv4
+    clientSocket = socket(AF_INET, SOCK_DGRAM)
+    # AF_NET -> ipv4
     # AF_NET6 -> ipv6
     # SOCK_DGRAM -> UDP (DGRAM = datagrammi)
     # SOCK_STREAM -> TCP (STREAM = flusso tcp)

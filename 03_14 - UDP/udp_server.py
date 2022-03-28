@@ -13,6 +13,8 @@ def main():
     # SOCK_STREAM -> TCP (STREAM = flusso tcp)
 
     serverSocket.bind(('', serverPort))
+    # Lasciando vuota il serverName nella tuple di .bind accetti tutti gli host
+
     print(f'Server attivo, porta {serverPort}')
 
     while True:
@@ -24,10 +26,7 @@ def main():
         print(f'Connessione: {clientAddress[0]}:{clientAddress[1]}')
 
         serverSocket.sendto(modifiedMessage.encode('utf-8'), clientAddress)
-
-
+        # Non hai nessuna chiusura del socket, sennò server non può accettare altre richieste
 
 if __name__ == '__main__':
     main()
-
-    #NETSTAT -N
