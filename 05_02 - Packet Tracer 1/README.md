@@ -34,6 +34,9 @@
 Seriali non utilizzano ARP
 
 
+Su PC
+telnet ip -> accesso a router via internet
+
 
 
 
