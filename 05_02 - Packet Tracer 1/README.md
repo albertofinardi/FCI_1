@@ -3,8 +3,8 @@
 ## Permessi utente -> Hostname> :
 
 ```console ping``` -> pinga connessione IP
-```console traceroute -> pinga tutti i nodi intermedi in una connessione
-```console enable -> permessi privilegiati (da Hostname> diventa Hostname#)
+```console traceroute``` -> pinga tutti i nodi intermedi in una connessione
+```console enable``` -> permessi privilegiati (da Hostname> diventa Hostname#)
 
 
 ## Permessi Privilegiati -> Hostname# :
