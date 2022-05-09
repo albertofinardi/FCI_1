@@ -1,44 +1,45 @@
 # Comandi Cisco Packet Tracer
 
-## Permessi utente -> Hostname> :
+## Permessi utente ( Hostname> ):
+| Comando | Utilizzo |
+| ------ | ------ |
+| ``` ping``` | pinga connessione IP |
+| ``` traceroute``` | pinga tutti i nodi intermedi in una connessione |
+| ``` enable``` | permessi privilegiati (da Hostname> diventa Hostname#) 
 
-```console ping``` -> pinga connessione IP
-```console traceroute``` -> pinga tutti i nodi intermedi in una connessione
-```console enable``` -> permessi privilegiati (da Hostname> diventa Hostname#)
+## Permessi Privilegiati ( Hostname# ):
+| Comando | Utilizzo |
+| ------ | ------ |
+| ``` show running-config``` | mostra configurazione corrente |
+| ``` show startup-config``` | mostra configurazione al riavvio |
+| ``` copy running-config startup-config``` | salva le configurazioni impostate |
+| ``` conf t``` | terminale configurazione |
+| ``` reload``` | riavvia server |
+| ``` disable``` | esci da permessi privilegiati ( da Hostname# a Hostname> ) |
+| ``` show ip route``` | visualizza tabella routing |
 
+## Terminale Configurazione ( Hostname(config)# ):
+| Comando | Utilizzo |
+| ------ | ------ |
+| ``` hostname <name>``` | cambio nome hostname |
+| ``` enable secret <psw>``` | imposta password per accesso permessi privilegiati |
+| ``` no enable secret``` | rimuove password |
+| ``` exit``` | esce da modalitˆ configurazione |
+| ``` interface <name>``` | modalitˆ configurazione interfaccia specifica |
 
-## Permessi Privilegiati -> Hostname# :
-```console show running-config``` -> configurazione corrente
-```console show startup-config``` -> configurazione al riavvio
-```console copy running-config startup-config``` -> salva le configurazioni impostate
-```console conf t``` -> terminale configurazione
-```console reload``` -> riavvia server
-```console disable``` -> esci da permessi privilegiati
-```console show ip route``` -> visualizza tabella routing
-
-## Terminale Configurazione -> Hostname(config)# :
-```console hostname <name>``` -> cambio hostname
-```console enable secret <psw>``` -> x diventa password per accesso permessi privilegiati
-```console no enable secret``` -> rimuove password
-```console exit``` -> esce da modalitˆ configurazione
-```console interface <name>``` -> configurazione interfaccia specifica
-
-## Terminale Configurazione Specifica -> Hostname(config-if)# :
-```console IP address <ip> <netmask>``` -> configurazione ip
-```console no shutdown``` -> accendere interfaccia 
-```console clock rate <rate>``` -> impostare clock in 
-```console description <descr>``` -> descrizione router
-```console arp timeout <time>``` -> modifica timeout di interfaccia
-
-
+## Terminale Configurazione Interfaccia ( Hostname(config-if)# ):
+| Comando | Utilizzo |
+| ------ | ------ |
+| ``` IP address <ip> <netmask>``` | configurazione ip|
+| ``` no shutdown``` | accendere interfaccia |
+| ``` clock rate <rate>``` | impostare clock in |
+| ``` description <descr>``` | descrizione router |
+| ``` arp timeout <time>``` | modifica timeout di interfaccia |
 Seriali non utilizzano ARP
 
 
-Su PC
-telnet ip -> accesso a router via internet
-
-
-
-
-
-
+## Su PC ( command terminal ):
+| Comando | Utilizzo |
+| ------ | ------ |
+| ``` telnet <ip> ``` | accesso a router via internet |
+| ``` ping <ip> ``` | pinga router |
